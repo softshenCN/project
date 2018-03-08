@@ -1,0 +1,73 @@
+
+	1.response 用来代表相应，可以理解为一个空的箱子。里面写入发送到浏览器中的内容，服务器把这些内容组装成HTTP响应
+	
+	响应首行 协议 版本号 状态码 状态码描述
+		添加状态码 和 描述 
+		
+		void setStatus(int sc) 只设置状态码
+		  Sets the status code for this response
+		void setStatus(int sc,String sm) 设置状态码和描述
+		  Deprecated. As of version 2.1, due to ambiguous meaning of the message parameter. To set a status code use setStatus(int), to send an error with a description use sendError(int, String). Sets the status code and message for this response.
+		void sendError(int sc) 
+          Sends an error response to the client using the specified status code and clearing the buffer.
+ 		void sendError(int sc, String msg) 
+          Sends an error response to the client using the specified status. 
+		
+             设置两对方法： response的内容不同，返回的值不同
+	响应头
+		添加响应头（增加响应头）
+		 void addHeader(String name, String value) 
+          Adds a response header with the given name and value. 
+ 		 void addIntHeader(String name, int value) 
+          Adds a response header with the given name and integer value. 
+        设置响应头（只设置一个响应头，后续会覆盖）
+         void setHeader(String name, String value) 
+          Sets a response header with the given name and value. 
+ 		 void setIntHeader(String name, int value) 
+          Sets a response header with the given name and integer value. 
+          
+         void addDateHeader(String name, long date) 
+          Adds a response header with the given name and date-value. 
+         void setDateHeader(String name, long date) 
+          Sets a response header with the given name and date-value. 
+          
+		
+	响应空行
+	
+	响应正文
+		发送字节流
+			getOutPutStream
+		发送字符流 
+			getWriter
+		就是内容
+		
+	应用：
+	eg1：手动向浏览器发送404
+	
+	eg2：重定向
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
